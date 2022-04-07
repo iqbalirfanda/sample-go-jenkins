@@ -4,7 +4,7 @@ node {
     def root = "/usr/local/go/bin/go"
 
         stage 'Checkout'
-        checkout git: 'https://github.com/iqbalirfanda/sample-go-jenkins.git'
+        git url: 'https://github.com/iqbalirfanda/sample-go-jenkins.git'
         
         stage 'preTest'
         sh "${root} version"
