@@ -70,16 +70,12 @@ pipeline {
             }
 
             stage ("Go Dockerize"){
-                agent { docker { image 'golang' } }
-
                 steps {
                     sh "docker build -t sample-go-jenkins"
                 }
             }
 
             stage ( "Deploy") {
-                agent { docker { image 'golang' } }
-
                 steps {
                     echo "DEPLOY SUCCESS"
                 }
